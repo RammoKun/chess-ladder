@@ -176,15 +176,15 @@ export function StudentProfileClient({ studentId }: { studentId: string }) {
     if (!confirm('Remove profile photo?')) return;
 
     try {
-      console.log("Removing photo for student:", student.id);
+      console.log("Removing photo for student:", student?.id);
       
-      if (!student.photo_url) {
+      if (!student?.photo_url) {
         error('No photo to remove');
         return;
       }
 
       // Extract filename from URL
-      const urlParts = student.photo_url.split('/');
+      const urlParts = student?.photo_url?.split('/');
       const fileName = urlParts[urlParts.length - 1];
       console.log("Deleting file from storage:", fileName);
 
