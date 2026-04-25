@@ -3,7 +3,7 @@
 import { ReactNode, useState } from "react";
 
 const STORAGE_KEY = "chess-ladder-admin-unlocked";
-const FALLBACK_PIN = "1234";
+const FALLBACK_PIN = "8658211110";
 
 export function AdminGate({ children }: { children: ReactNode }) {
   const [allowed, setAllowed] = useState<boolean>(() => {
